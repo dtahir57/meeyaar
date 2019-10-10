@@ -23,6 +23,7 @@ class CreateCategoriesTable extends Migration
                     ->onUpdate('cascade');
             $table->string('title');
             $table->string('image')->nullable();
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
         });
     }
